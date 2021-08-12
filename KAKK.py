@@ -56,8 +56,8 @@ def sendEmail(to, content):
     server.starttls()
 
     # Enable low security in gmail
-    server.login('satrajitghosh183@gmail.com', 'ribhughosh2000')
-    server.sendmail('satrajitghosh183@gmail.com', to, content)
+    server.login('email', 'password')
+    server.sendmail('semail', to, content)
     server.close()
 
 def takeCommand():
@@ -135,7 +135,7 @@ if __name__=='__main__':
 
         elif "weather in" in statement:
                 listening = True
-                api_key = "e969a81e0ee7d219edd4f831ea9683ec"
+                api_key = "api key"
                 weather_url = "http://api.openweathermap.org/data/2.5/weather?"
                 statement = statement.split(" ")
                 location = str(statement[2])
@@ -188,16 +188,13 @@ if __name__=='__main__':
                   'opening youtube,google chrome,gmail and stackoverflow ,predict time,take a photo,search wikipedia,predict weather' 
                   'in different cities , get top headline news from times of india and you can ask me computational or geographical questions too!')
 
-        elif "sad" in statement:
-            speak("Kill yourself famalam")
-            print("Kill yourself famalam")
-            time.sleep(5)
+        
 
 
 
         elif "who made you" in statement or "who created you" in statement or "who discovered you" in statement:
-            speak("I was built by dumbass Satrajit")
-            print("I was built by dumbass Satrajit")
+            speak("I was built by Satrajit")
+            print("I was built by Satrajit")
         elif 'play music' in statement or "play song" in statement:
             speak("Here you go with music")
             # music_dir = "G:\\Song"
@@ -242,8 +239,8 @@ if __name__=='__main__':
         elif 'question' in statement:
             speak('I can answer to computational and geographical questions and what question do you want to ask now')
             question=takeCommand()
-            app_id="A33RHX-HGYPQXW9Q9"
-            client = wolframalpha.Client('R2K75H-7ELALHR35X')
+            app_id="app id"
+            client = wolframalpha.Client('client id')
             res = client.query(question)
             answer = next(res.results).text
             speak(answer)
