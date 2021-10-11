@@ -93,8 +93,6 @@ if __name__=='__main__':
             print('your personal assistant Jarvis is shutting down,Good bye')
             break
 
-
-
         if 'wikipedia' in statement:
             speak('Searching Wikipedia...')
             statement =statement.replace("wikipedia", "")
@@ -102,6 +100,9 @@ if __name__=='__main__':
             speak("According to Wikipedia")
             print(results)
             speak(results)
+            
+        elif 'all commands' in statement:
+            pyautogui.alert("wikipedia\nopen youtube\njoke\nopen google\nopen gmail\nemail from satrajit\nweather in\nhow are you\nfine/good\nwrite a note\nopen note\ntime\nwho are you\nwho made you\nwhat can you do\nwho created/discovered you\nplay music/song\nopen stackoverflow\nnews\nsearch\ntake picture\nquestion\nlock windows\nshutdown system\nempty recycle bin\ndo not listen/stop listening\nwhere is\nrestart\npower off/sign out")
 
         elif 'open youtube' in statement:
             webbrowser.open_new_tab("https://www.youtube.com")
